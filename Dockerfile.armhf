@@ -80,6 +80,12 @@ RUN \
     php8-xmlrpc \
     php8-xsl \
     php8-zip && \
+  echo "**** installing imagemagick ****"
+  apk add --no-cache \
+    php8-pecl-imagick \
+    imagemagick && \
+  echo "**** installing composer ****"
+  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
   echo "**** configure nginx ****" && \
   rm -f /etc/nginx/http.d/default.conf && \
   sed -i \
