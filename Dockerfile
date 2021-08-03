@@ -76,13 +76,19 @@ RUN \
     php8-xml \
     php8-xmlreader \
     php8-xsl \
-    php8-zip && \
+    php8-zip
+
+RUN \
   echo "**** installing imagemagick ****" && \
   apk add --no-cache \
     php8-pecl-imagick \
-    imagemagick && \
+    imagemagick
+
+RUN \
   echo "**** installing composer ****" && \
-  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
+  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+
+RUN \
   echo "**** configure nginx ****" && \
   rm -f /etc/nginx/http.d/default.conf && \
   sed -i \
