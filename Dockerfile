@@ -89,6 +89,9 @@ RUN \
   curl -sS https://getcomposer.org/installer | php8 -- --install-dir=/usr/bin --filename=composer
 
 RUN \
+  ln -s /usr/bin/php8 /usr/bin/php
+
+RUN \
   echo "**** configure nginx ****" && \
   rm -f /etc/nginx/http.d/default.conf && \
   sed -i \
