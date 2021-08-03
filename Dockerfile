@@ -54,8 +54,6 @@ RUN \
     php8-imap \
     php8-intl \
     php8-ldap \
-    php8-mcrypt \
-    php8-memcached \
     php8-mysqli \
     php8-mysqlnd \
     php8-opcache \
@@ -77,7 +75,6 @@ RUN \
     php8-tokenizer \
     php8-xml \
     php8-xmlreader \
-    php8-xmlrpc \
     php8-xsl \
     php8-zip && \
   echo "**** installing imagemagick ****" && \
