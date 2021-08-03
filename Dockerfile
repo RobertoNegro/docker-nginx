@@ -86,7 +86,7 @@ RUN \
 
 RUN \
   echo "**** installing composer ****" && \
-  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+  curl -sS https://getcomposer.org/installer | php8 -- --install-dir=/usr/bin --filename=composer
 
 RUN \
   echo "**** configure nginx ****" && \
